@@ -1,14 +1,15 @@
 package com.edugen.edugen_api.models;
 
 public class Usuario {
-    private String nombre, email, rol;
+    private String nombre, email, rol, password;
     private long id;
 
-    public Usuario(long id, String nombre, String email, String rol) {
+    public Usuario(long id, String nombre, String email, String rol, String password) {
         this.nombre = nombre;
         this.email = email;
         this.rol = rol;
         this.id = id;
+        this.password=password;
     }
 
     public String getNombre() {
@@ -43,5 +44,11 @@ public class Usuario {
         this.id = id;
     }
 
-    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
