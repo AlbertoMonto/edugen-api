@@ -1,5 +1,7 @@
 package com.edugen.edugen_api.dto;
 
+import com.edugen.edugen_api.models.Usuario;
+
 public class UsuarioDTO {
     private String nombre, email, rol;
     private long id;
@@ -9,6 +11,13 @@ public class UsuarioDTO {
         this.email = email;
         this.rol = rol;
         this.id = id;
+    }
+
+    public UsuarioDTO(Usuario usuario) {
+        this.nombre = usuario.getNombre();
+        this.email = usuario.getEmail();
+        this.rol = usuario.getRol();
+        this.id = usuario.getId();
     }
 
     public String getNombre() {
